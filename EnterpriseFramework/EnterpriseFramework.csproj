@@ -28,8 +28,6 @@
     <PackageReference Include="SpecFlow" Version="3.7.38" />
     <PackageReference Include="SpecFlow.NUnit" Version="3.7.38" />
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.7.38" />
-	<PackageReference Include="Framework.Messaging.RabbitMq" Version="20.6.89" />
-	<PackageReference Include="Service.FinancialPortal.Messages" Version="20.1.7" />
   </ItemGroup>
 
   <ItemGroup>

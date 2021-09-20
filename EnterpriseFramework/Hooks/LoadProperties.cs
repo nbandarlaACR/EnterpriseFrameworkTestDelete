@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using TechTalk.SpecFlow;
 
-namespace LFL.Automation.Framework.Hooks
+namespace Enterprise.Framework.Hooks
 
 {
     [Binding]

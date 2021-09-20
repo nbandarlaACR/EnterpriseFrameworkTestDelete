@@ -1,5 +1,4 @@
-﻿using LFL.Automation.Framework.PageHelper;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -8,10 +7,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 
-namespace LFL.Automation.Framework.Actions
+namespace Enterprise.Framework.Actions
 {
     public class WebActions : BaseActions
     {
+
         public WebActions(IWebDriver webDriver) : base(webDriver)
         {
         }
@@ -164,7 +164,6 @@ namespace LFL.Automation.Framework.Actions
             catch (Exception e) when (e is InvalidOperationException || e is ElementClickInterceptedException || e is StaleElementReferenceException)
             {
                 log.Error(e);
-                WebPageHelper.ClickAcceptCookiesIfPresent(Driver);
                 WaitForItem(Driver, by);
                 element = Driver.FindElement(by);
                 element.Click();
@@ -185,7 +184,6 @@ namespace LFL.Automation.Framework.Actions
             catch (Exception e) when (e is InvalidOperationException || e is ElementClickInterceptedException || e is StaleElementReferenceException)
             {
                 log.Error(e);
-                WebPageHelper.ClickAcceptCookiesIfPresent(Driver);
                 WaitForItem(Driver, element);
                 element.Click();
                 log.Debug("Successfully performed click on element upon exception " + element.ToString());
@@ -205,7 +203,6 @@ namespace LFL.Automation.Framework.Actions
             catch (Exception e) when (e is InvalidOperationException || e is ElementClickInterceptedException || e is StaleElementReferenceException)
             {
                 log.Error(e);
-                WebPageHelper.ClickAcceptCookiesIfPresent(Driver);
                 WaitForItem(Driver, element);
                 element.Click();
                 log.Debug("Successfully performed click on element upon exception " + element.ToString());
@@ -222,8 +219,7 @@ namespace LFL.Automation.Framework.Actions
 
             catch (Exception e) when (e is InvalidOperationException || e is ElementClickInterceptedException || e is StaleElementReferenceException)
             {
-                log.Error(e);
-                WebPageHelper.ClickAcceptCookiesIfPresent(Driver);
+                log.Error(e);                
                 WaitForItem(Driver, element);
                 element.Click();
                 log.Debug("Successfully performed click on chechbox upon exception " + element.ToString());

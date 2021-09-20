@@ -1,4 +1,4 @@
-﻿using LFL.Automation.Framework.GenericLib;
+﻿using Enterprise.Framework.GenericLib;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.Interfaces;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using TechTalk.SpecFlow;
 
-namespace LFL.Automation.Framework.Hooks
+namespace Enterprise.Framework.Hooks
 {
     [Binding]
     public class Hooks

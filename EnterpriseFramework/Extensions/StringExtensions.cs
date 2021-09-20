@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LFL.Automation.Framework.Extensions
+namespace Enterprise.Framework.Extensions
 {
     public static class StringExtensions
     {

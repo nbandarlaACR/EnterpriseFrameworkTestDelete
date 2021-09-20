@@ -4,7 +4,7 @@ using System.Text;
 using TechTalk.SpecFlow;
 
 [assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config")]
-namespace LFL.Automation.Framework.Hooks
+namespace Enterprise.Framework.Hooks
 {
     [Binding]
     public class Logger

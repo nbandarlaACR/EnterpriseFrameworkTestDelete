@@ -11,11 +11,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TechTalk.SpecFlow;
-using LFL.Automation.Framework.Hooks;
+using Enterprise.Framework.Hooks;
 using OpenQA.Selenium.Safari;
-using LFL.Automation.Framework.Constants;
+using Enterprise.Framework.Constants;
 
-namespace LFL.Automation.Framework.Hooks
+namespace Enterprise.Framework.Hooks
 {
     [Binding]
     public class DriverSetup
@@ -35,6 +35,7 @@ namespace LFL.Automation.Framework.Hooks
         private static readonly int _webdriver_implicitTimeout = int.Parse(Environment.GetEnvironmentVariable("webdriver.implicitTimeout"));
         private static readonly int _webdriver_pageLoadTimeout = int.Parse(Environment.GetEnvironmentVariable("webdriver.pageLoadTimeout"));
         private static Uri appiumLocalServer = new Uri("http://127.0.01:4723/wd/hub");
+        private String _appURL = Environment.GetEnvironmentVariable("URL");
         private AppiumOptions caps = null;
        // private ScenarioContext _scenarioContext;
         private string _sessionId;
@@ -149,6 +150,7 @@ namespace LFL.Automation.Framework.Hooks
                         log.Error("No browser value selected in the appSettings.json file");
                         throw new Exception("No browser value selected in the appSettings.json file"); 
                     }
+                    WebDriver.Navigate().GoToUrl(_appURL);
                     WebDriver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(_webdriver_pageLoadTimeout);
                     log.Debug("Page load timeout is set to "+_webdriver_pageLoadTimeout);
                 }

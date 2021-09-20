@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LFL.Automation.Framework.GenericLib
+namespace Enterprise.Framework.GenericLib
 {
     public static class RestHelper
     {

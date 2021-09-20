@@ -12,9 +12,9 @@ using Autofac;
 
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using LFL.Automation.Framework.GenericLib;
+using Enterprise.Framework.GenericLib;
 
-namespace LFL.Automation.Framework.DataLib
+namespace Enterprise.Framework.DataLib
 {
     public class JSONReader
     {

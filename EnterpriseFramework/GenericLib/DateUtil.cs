@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LFL.Automation.Framework.GenericLib
+namespace Enterprise.Framework.GenericLib
 {
     public class DateUtil
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using TechTalk.SpecFlow;
 
-namespace LFL.Automation.Framework.Extensions
+namespace Enterprise.Framework.Extensions
 {
     public static class TableRowsExtensions
     {

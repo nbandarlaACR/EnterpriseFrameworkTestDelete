@@ -1,7 +1,7 @@
 ﻿using AventStack.ExtentReports;
 using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
-using LFL.Automation.Framework.GenericLib;
+using Enterprise.Framework.GenericLib;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 using TechTalk.SpecFlow;
 
 
-namespace LFL.Automation.Framework.Hooks
+namespace Enterprise.Framework.Hooks
 {
     [Binding]
     public class ExtentReport
@@ -63,7 +63,7 @@ namespace LFL.Automation.Framework.Hooks
             ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(_testResultsPath);
             //ExtentV3HtmlReporter htmlReporter = new ExtentV3HtmlReporter(_testResultsPath+"//Results.html");
             htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
-            htmlReporter.Config.ReportName = "Lowell-TestExecution-Results";
+            htmlReporter.Config.ReportName = "ACR-TestExecution-Results";
             _extent = new ExtentReports();
             _extent.AttachReporter(htmlReporter);
             _extent.AddSystemInfo("Environment", Environment.GetEnvironmentVariable("Environment"));

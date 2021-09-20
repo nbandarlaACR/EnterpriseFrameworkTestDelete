@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace LFL.Automation.Framework.Actions
+namespace Enterprise.Framework.Actions
 {
     
     public class BaseActions
@@ -125,6 +125,14 @@ namespace LFL.Automation.Framework.Actions
                 return false;
             }
             
+        }
+
+        public string GetText(By locator)
+        {
+            log.Debug("Trying to retrieve text from the element " + locator.ToString());
+            String text = WaitFor(locator).Text;
+            log.Debug("Successfully retrieved text '" + text + "from the element " + locator.ToString());
+            return text;
         }
 
     }

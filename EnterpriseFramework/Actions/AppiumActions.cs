@@ -11,7 +11,7 @@ using OpenQA.Selenium.Interactions;
 using System.Drawing;
 using OpenQA.Selenium.Appium.MultiTouch;
 
-namespace LFL.Automation.Framework.Actions
+namespace Enterprise.Framework.Actions
 {
     public class AppiumActions : BaseActions
     {

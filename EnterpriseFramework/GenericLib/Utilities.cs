@@ -7,15 +7,12 @@ using System.Linq;
 using System.Text;
 using Autofac;
 
-using LFL.Automation.Framework.DataLib;
+using Enterprise.Framework.DataLib;
 using Microsoft.Extensions.Logging;
-using Framework.Messaging;
-using Framework.Messaging.RabbitMq;
-using Service.FinancialPortal.Messages.v1;
 using System.Globalization;
 using System.Diagnostics;
 
-namespace LFL.Automation.Framework.GenericLib
+namespace Enterprise.Framework.GenericLib
 {
     public static class Utilities
     {
